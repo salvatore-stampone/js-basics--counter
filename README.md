@@ -10,10 +10,10 @@ It also prevents the user to go below 0.
 This project is part of my learnings on the Start2Impact platform.
 It is meant to be simple.
 
-Try it at [this link](https://salvatore-stampone.github.io/js-basics--counter/)!
+Try it at [this link](https://salvatore-stampone.github.io/js-basics--counter?target=_blank/)!
 
 ## Contact
 
 * [Mail](mailto:salvatorestampone@icloud.com);
-* [Instagram](https://www.instagram.com/salvatorestampone.dev/);
-* [LinkedIn](https://www.linkedin.com/in/salvatore-stampone-781a511b5/).
+* [Instagram](https://www.instagram.com/salvatorestampone.dev?target=_blank/);
+* [LinkedIn](https://www.linkedin.com/in/salvatore-stampone-781a511b5?target=_blank/).
