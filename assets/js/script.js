@@ -1,11 +1,46 @@
-let counter = document.querySelector(".counter");
-const plusOneButton = document.querySelector(".plus-one");
-const minusOneButton = document.querySelector(".minus-one");
-const plusCustomNumberButton = document.querySelector(".plus-custom-number");
-const minusCustomNumberButton = document.querySelector(".minus-custom-number");
-const resetButton = document.querySelector(".reset");
-const customNumberButton = document.querySelector(".custom-number");
+const body = document.body;
+
+let counter = document.createElement("div");
+counter.className = "counter";
+counter.innerHTML = 0;
+body.prepend(counter);
+
+const buttonsDiv = document.createElement("div");
+buttonsDiv.className = "buttons";
+counter.after(buttonsDiv);
+
+const plusOneButton = document.createElement("button");
+plusOneButton.classList.add("circular-button", "plus-one");
+plusOneButton.innerHTML = "+";
+buttonsDiv.append(plusOneButton);
+
+const resetButton = document.createElement("button");
+resetButton.className = "reset";
+resetButton.innerHTML = "AC";
+buttonsDiv.append(resetButton);
+
+const minusOneButton = document.createElement("button");
+minusOneButton.classList.add("circular-button", "minus-one");
+minusOneButton.innerHTML = "-";
+buttonsDiv.append(minusOneButton);
+
+const plusCustomNumberButton = document.createElement("button");
+plusCustomNumberButton.classList.add("long-button", "plus-custom-number");
+plusCustomNumberButton.innerHTML = "+100";
+buttonsDiv.append(plusCustomNumberButton);
+
+const minusCustomNumberButton = document.createElement("button");
+minusCustomNumberButton.classList.add("long-button", "minus-custom-number");
+minusCustomNumberButton.innerHTML = "-100";
+buttonsDiv.append(minusCustomNumberButton);
+
+const customNumberButton = document.createElement("button");
+customNumberButton.classList.add("very-long-button", "custom-number");
+customNumberButton.innerHTML = "Set a custom number to add/subtract!";
+buttonsDiv.append(customNumberButton);
+
 let currentNumber;
+
 
 plusOneButton.addEventListener("click", addOne);
 minusOneButton.addEventListener("click", subtractOne);
@@ -47,7 +82,6 @@ function subtractCustomNumber() {
 function resetCounter() {
     counter.textContent = 0;
 }
-
 
 function replaceCustomNumber() {
     let customNumber = parseInt(prompt("Write the number you want to add/subtract:"));
